@@ -1,0 +1,17 @@
+window length L
+string Genome has len(Genome)/L such windows (|Genome|)
+
+|Genome|
+
+Finding a kmer in Text requires
+
+|Text|-k+1 checks for each kmer
+
+Total number of checks is up to (|Text|-k+1)*(|Text|-k+1)*k
+Upper bound of |Text|^2 * k
+
+
+Each window requires
+|L|^2 * k
+
+

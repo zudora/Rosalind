@@ -8,7 +8,6 @@
 # Output
 # CATG GCAT
 
-
 #f = open('rosalind_1a.txt', 'r')
 f = open('frequent_words.txt', 'r')
 
