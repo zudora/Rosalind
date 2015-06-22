@@ -7,6 +7,8 @@ def patternCount(Text, Pattern):
             count += 1
     return count
 
+# this is the naive algorithm: check each kmer along the whole string
+
 def FrequentWords(Text, k):
     FrequentPatterns = set()
     Count = []
