@@ -11,8 +11,11 @@ def min_skew(genome):
             skew_i += 1
         elif nuc == "C":
             skew_i -= 1
+        
         else:
             pass
+        
+        print i, skew_i
         if skew_i == min_skew:
              min_list.append(i + 1)
         elif skew_i < min_skew:
@@ -20,10 +23,8 @@ def min_skew(genome):
             min_skew = skew_i
     return min_list
 
-genome = "TAAAGACTGCCGAGAGGCCAACACGAGTGCTAGAACGAGGGGCGTAAACGCGGGTCCGAT"
-print data[0:10]
-print data[len(data)- 11:len(data)]
+genome = "GATACACTTCCCGAGTAGGTACTG"
 
-min_list = min_skew(data)
+min_list = min_skew(genome)
 
 print min_list
