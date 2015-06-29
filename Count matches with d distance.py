@@ -1,4 +1,4 @@
-from hamming_dist import find_hamming_dist as ham
+#from hamming_dist import find_hamming_dist as ham
 
 def find_most_freq_kmer(text, k, d):
     #All most frequent k-mers with up to d mismatches in Text
@@ -46,21 +46,18 @@ def find_most_freq_kmer(text, k, d):
 
 def gen_all_kmers(k):
     kmer_list = []
-    partial_list = []
+    partial_list = ["A", "B", "C", "D"]
     sym_list = ["A", "B", "C", "D"]
 
-    for i in range(0, k):
-        if i == 0:
-            partial_list.append(sym_list[i])        
-        elif i < k:
-            temp_list = []
-            for item in kmer_list:
-                temp_string = item + sym_list[i]
-                partial_list.append(temp_string)
+    for i in range(1, k):
         
-        else:
-            pass
+        for item in kmer_list:
+            temp_list = []
+            temp_string = item + sym_list[i]
+            temp_list.append(temp_string)
+        
         kmer_list = partial_list
+        
     return kmer_list
 
 listo = gen_all_kmers(3)
